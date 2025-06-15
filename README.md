@@ -1,2 +1,2 @@
 # code-architecture-lab
-A daily coding sprint to master SOLID principles and design patterns in PHP through real-world examples and architecture challenges.
+A daily coding sprint to master SOLID principles and design patterns through real-world examples and architecture challenges.
