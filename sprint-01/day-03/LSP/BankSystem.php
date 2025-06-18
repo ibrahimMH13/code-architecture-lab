@@ -70,3 +70,38 @@ foreach ($accountTypes as $account) {
         echo "something went wrong , try again later \n";
     }
 }
+
+echo "-----------------------------------------------";
+
+
+
+interface Machine{}
+interface Printer extends Machine{
+    public function printDocument();
+}
+interface Scanner extends Machine{
+    public function scanDocument();
+}
+interface Fax extends Machine{
+    public function faxDocument();
+}
+
+
+class OldPrinter implements Printer{
+
+    public function printDocument(){
+        echo "\ndoing print now\n";
+    }
+}
+
+
+class DeviceManager {
+
+    public function print(Printer $device){
+            echo $device->printDocument();
+    }
+}
+
+$dm = new DeviceManager();
+
+$dm->print(new OldPrinter());
