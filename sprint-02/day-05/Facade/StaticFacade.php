@@ -32,4 +32,4 @@ class LogFacade extends Facade{
 }
 
 
-LogFacade::log("hello, Man");
+LogFacade::log("hello, Man, 5");
