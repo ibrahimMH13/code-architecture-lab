@@ -16,14 +16,7 @@ class NotificationObserver implements IObserver{
        $dispatcher = new NotificationDispatcher();
        $strategy = new DefaultDeliveryStrategy();
        $service = new NotificationService($strategy, $dispatcher);
-       $event = 'invoice_paid';
-        $userData = [
-            "name" => "Ibrahim I.I. Musabeh",
-            "year" => 2025,
-            "age" => ":P"
-        ];
-
-        $service->send($event, $userData);
+       $service->send($data['event'], $data);
 
     }
 
