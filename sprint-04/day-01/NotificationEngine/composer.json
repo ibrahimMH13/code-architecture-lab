@@ -1,0 +1,15 @@
+{
+    "name": "ibrahimmusabeh/notification-engine",
+    "autoload": {
+        "psr-4": {
+            "Ibrahimmusabeh\\NotificationEngine\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ibrahim II Musabeh",
+            "email": "i.musabah92@gmail.com"
+        }
+    ],
+    "require": {}
+}
