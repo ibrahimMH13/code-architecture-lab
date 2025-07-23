@@ -10,14 +10,14 @@ use Ibrahimmusabeh\TextEditor\Contract\{
 class TextColorDecorator implements ITextComponent{
 
     public function __construct(private ITextComponent $textComponent){}
-    public function render():string{
-        if (php_sapi_name() === 'cli') {
-            return "\033[93m" . $this->textComponent->render() . "\033[39m";
-        } else {
-           return "<span style='color:red'>" . $this->textComponent->render() . "</span>"; 
-        }
+    public function render(): string
+    {
+        $content = $this->textComponent->render();
+        return php_sapi_name() === 'cli'
+            ? "\033[33m{$content}\033[0m"
+            : "<span style='color:yellow;'>{$content}</span>";
     }
-
+        
     public function getCost():float{
         return $this->textComponent->getCost() + 2;
     }
