@@ -1,0 +1,15 @@
+{
+    "name": "ibrahimmusabeh/text-editor",
+    "autoload": {
+        "psr-4": {
+            "Ibrahimmusabeh\\TextEditor\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ibrahim II Musabeh",
+            "email": "i.musabah92@gmail.com"
+        }
+    ],
+    "require": {}
+}
